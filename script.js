@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     breaktext();
 
-    // GSAP animations
     gsap.from("h1 span", {
         y: 50,
         opacity: 0,
@@ -125,40 +124,20 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSlider();
     });
 
-    function updateSlider() {
-        const offset = -currentIndex * 100;
-        container.style.transform = `translateX(${offset}%)`;
-    }document.getElementById('contactForm').addEventListener('submit', submitForm);
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw0L7ZhfoXii1ufpHHLnGg2FFIuFnr25e-vR7C2zMinvi-NPCUpa0LsLAIKtZc5X1mM/exec';
+    const form = document.getElementById('contactForm');
 
-    function submitForm(event) {
-        event.preventDefault();
-        
-        const form = document.getElementById('contactForm');
-        const formData = new FormData(form);
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            contact: formData.get('contact'),
-            message: formData.get('message')
-        };
-    console.log(data)
-        fetch('https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbx8WgOoQ5wMcrvaAxvLZnSuMurmP9ukjk3vMn8cco6qWmPjQYZB5ruD2FxIlVsTukFH/exec', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        }).then(response => response.text())
-          .then(text => {
-              alert('Message sent successfully!');
-              form.reset();
-          })
-          .catch(error => {
-              alert('There was a problem sending your message.');
-              console.error('Error:', error);
-          });
+    // Ensure form exists
+    if (form) {
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thank you! Your form is submitted successfully."))
+                .then(() => { window.location.reload(); })
+                .catch(error => console.error('Error!', error.message));
+        });
+    } else {
+        console.error('Form not found!');
     }
-    
-        
     
 });
