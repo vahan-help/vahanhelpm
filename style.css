@@ -307,7 +307,7 @@ i {
         font-size: 1em;
         width: 90%;
     }
-
+/* 
     .services .servicesBox {
         height: auto;
         display: flex;
@@ -318,14 +318,20 @@ i {
         font-size: 6vh;
     }
     .services .servicesBox .leftservicebox{
-        width: 40%;
+        width: 10%;
     }
-    
+    .services .servicesBox .leftservicebox img{
+        width: 105px;
+    }
     .services .servicesBox .rightservicebox{
-        width: 60%;
+        width: 90%;
+        font-size: 1.1vh;
     }
     .services .servicesBox .leftservicebox1{
         width: 80%;
+    }
+    .services .servicesBox .leftservicebox1 img{
+        width: 105px;
     }
     .services .servicesBox .rightservicebox1{
         width: 20%;
@@ -338,10 +344,64 @@ i {
     }
     .services .servicesBox p {
         font-size: 9px;
+    }*/
+    /* new services */
+    .services .servicesBox {
+        height: auto; /* Allow height to adjust based on content */
+        flex-direction: column; /* Stack the boxes vertically */
+        align-items: flex-start; /* Align items to the start */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .services .servicesBox .leftservicebox, 
+    .services .servicesBox .leftservicebox1 {
+        width: 100%; /* Full width on mobile */
+        padding: 0; /* Remove padding */
+        text-align: center; /* Center align text and images */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .services .servicesBox img {
+        width: 80%; /* Adjust image size to fit mobile screens */
+        max-width: 200px; /* Ensure images are not too large */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .services .servicesBox .rightservicebox, 
+    .services .servicesBox .rightservicebox1 {
+        width: 100%; /* Full width on mobile */
+        padding: 10px; /* Add padding for better spacing */
+        text-align: justify; /* Justify text */
+    }
+
+    .services .servicesBox .rightservicebox p,
+    .services .servicesBox .rightservicebox1 p {
+        text-indent: 1em; /* Indent text */
+        font-size: 1.8vh; /* Adjust font size */
+        line-height: 1.4; /* Improve readability */
+    }
+
+    .services h1 {
+        font-size: 6vh; /* Adjust heading size for mobile */
+        text-align: center; /* Center align heading */
+    }
+
+    .services .servicesBox h2 {
+        font-size: 2.5vh; /* Adjust subheading size for mobile */
+        margin-bottom: 10px; /* Ensure margin is appropriate */
+        text-align: justify; /* Justify subheading text */
+    }
+
+    .services .servicesBox p {
+        font-size: 1.8vh; /* Adjust paragraph text size for mobile */
+        line-height: 1.4; /* Improve readability */
     }
     .people{
         flex-direction: column;
-    }
+    } 
 }
 
 @media (max-width: 480px) {
