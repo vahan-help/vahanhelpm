@@ -17,11 +17,9 @@ html, body {
     background-color: #F1F1F1;
     color: #333;
 }
-/* Navigation Styles */
 .nav .left img{
-    height: 130px;
+    height: 80px;
 }
-
 .nav {
     display: flex;
     justify-content: space-between;
@@ -37,18 +35,15 @@ html, body {
     z-index: 999;
     opacity: 0.9; /* Slightly increased opacity for better visibility */
 }
-
 .nav .left {
     font-size: 1.2em;
     font-weight: bold; 
     color: #333;
 }
-
 .nav .right {
     display: flex;
     align-items: center;
 }
-
 .nav .right a {
     color: black;
     text-decoration: none;
@@ -56,12 +51,10 @@ html, body {
     font-size: 1.3em;
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
-
 .nav .right a:hover {
     text-decoration: underline;
     color: black;
 }
-
 .nav .contButton {
     border: 1px solid #007bff;
     border-radius: 20px;
@@ -74,7 +67,6 @@ html, body {
     transition: background-color 0.3s ease;
     color: black;
 }
-
 .nav .contButton:hover {
     background-color: #007bff;
     color: white;

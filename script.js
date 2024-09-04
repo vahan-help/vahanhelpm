@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Function to split text into spans
     function breaktext() {
         var h1 = document.querySelector(".head h1");
         var h1text = h1.textContent;
@@ -11,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         h1.innerHTML = clutter;
     }
+
     breaktext();
 
     gsap.from("h1 span", {
@@ -44,10 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         this.pause();
     });
 
-    // Check if viewport width is below the mobile breakpoint
     const isMobile = window.innerWidth <= 768;
-
-    // ScrollTrigger for the left image and services page
     if (!isMobile) {
         gsap.registerPlugin(ScrollTrigger);
 
@@ -106,6 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalSlides = slides.length;
     let currentIndex = 0;
 
+    function updateSlider() {
+        const slideWidth = slides[0].clientWidth;
+        container.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+
     document.getElementById('next').addEventListener('click', () => {
         if (currentIndex < totalSlides - 1) {
             currentIndex++;
@@ -124,10 +126,11 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSlider();
     });
 
+    updateSlider();
+
     const scriptURL = 'https://script.google.com/macros/s/AKfycbw0L7ZhfoXii1ufpHHLnGg2FFIuFnr25e-vR7C2zMinvi-NPCUpa0LsLAIKtZc5X1mM/exec';
     const form = document.getElementById('contactForm');
 
-    // Ensure form exists
     if (form) {
         form.addEventListener('submit', e => {
             e.preventDefault();
@@ -139,5 +142,4 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error('Form not found!');
     }
-    
 });
