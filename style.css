@@ -346,59 +346,75 @@ i {
         font-size: 9px;
     }*/
     /* new services */
-    .services .servicesBox {
-        height: auto; /* Allow height to adjust based on content */
-        flex-direction: column; /* Stack the boxes vertically */
-        align-items: flex-start; /* Align items to the start */
-        padding: 10px; /* Add padding for better spacing */
-    }
+   /* General styles for all service boxes */
+.services .servicesBox {
+    height: auto; /* Adjust height based on content */
+    flex-direction: column; /* Stack the boxes vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding: 10px; /* Add padding for spacing */
+}
 
-    .services .servicesBox .leftservicebox, 
-    .services .servicesBox .leftservicebox1 {
-        width: 100%; /* Full width on mobile */
-        padding: 0; /* Remove padding */
-        text-align: center; /* Center align text and images */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
+/* Styles for left service boxes */
+.services .servicesBox .leftservicebox,
+.services .servicesBox .leftservicebox1 {
+    width: 100%; /* Full width on mobile */
+    padding: 0; /* Remove padding */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the start */
+    flex-direction: column;
+    text-align: left; /* Align text and images to the left */
+}
 
-    .services .servicesBox img {
-        width: 80%; /* Adjust image size to fit mobile screens */
-        max-width: 200px; /* Ensure images are not too large */
-        height: auto; /* Maintain aspect ratio */
-    }
+/* Image styles */
+.services .servicesBox img {
+    width: 80%; /* Adjust image size */
+    max-width: 200px; /* Ensure images are not too large */
+    height: auto; /* Maintain aspect ratio */
+}
 
-    .services .servicesBox .rightservicebox, 
-    .services .servicesBox .rightservicebox1 {
-        width: 100%; /* Full width on mobile */
-        padding: 10px; /* Add padding for better spacing */
-        text-align: justify; /* Justify text */
-    }
+/* Styles for right service boxes */
+.services .servicesBox .rightservicebox,
+.services .servicesBox .rightservicebox1 {
+    width: 100%; /* Full width on mobile */
+    padding: 10px; /* Add padding */
+    text-align: left; /* Align text to the left */
+}
 
-    .services .servicesBox .rightservicebox p,
-    .services .servicesBox .rightservicebox1 p {
-        text-indent: 1em; /* Indent text */
-        font-size: 1.8vh; /* Adjust font size */
-        line-height: 1.4; /* Improve readability */
-    }
+/* Paragraph styles for right boxes */
+.services .servicesBox .rightservicebox p,
+.services .servicesBox .rightservicebox1 p {
+    text-indent: 1em; /* Indent text */
+    font-size: 1.8vh; /* Adjust font size */
+    line-height: 1.4; /* Improve readability */
+    text-align: justify; /* Justify text */
+}
 
-    .services h1 {
-        font-size: 6vh; /* Adjust heading size for mobile */
-        text-align: center; /* Center align heading */
-    }
+/* Ensure the same alignment for paragraphs in 2nd and 4th boxes */
+.services .servicesBox:nth-child(2) .rightservicebox p,
+.services .servicesBox:nth-child(4) .rightservicebox p {
+    text-align: justify; /* Ensure justified alignment */
+    text-indent: 1em; /* Indent text to match */
+}
 
-    .services .servicesBox h2 {
-        font-size: 2.5vh; /* Adjust subheading size for mobile */
-        margin-bottom: 10px; /* Ensure margin is appropriate */
-        text-align: justify; /* Justify subheading text */
-    }
+/* Heading and paragraph styles */
+.services h1 {
+    font-size: 6vh; /* Adjust heading size for mobile */
+    text-align: center; /* Center align heading */
+}
 
-    .services .servicesBox p {
-        font-size: 1.8vh; /* Adjust paragraph text size for mobile */
-        line-height: 1.4; /* Improve readability */
-    }
+.services .servicesBox h2 {
+    font-size: 2.5vh; /* Adjust subheading size for mobile */
+    margin-bottom: 10px; /* Ensure appropriate margin */
+    text-align: justify; /* Justify subheading text */
+}
+
+.services .servicesBox p {
+    font-size: 1.8vh; /* Adjust paragraph text size for mobile */
+    line-height: 1.4; /* Improve readability */
+    text-align: justify; /* Ensure text is justified */
+}
+
     .people{
         flex-direction: column;
     } 
