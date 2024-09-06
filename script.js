@@ -1,30 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
-    function breaktext() {
-        var h1 = document.querySelector(".head h1");
-        var h1text = h1.textContent;
-        var splittedText = h1text.split("");
-        var clutter = "";
+    // function breaktext() {
+    //     var h1 = document.querySelector(".head h1");
+    //     var h1text = h1.textContent;
+    //     var splittedText = h1text.split("");
+    //     var clutter = "";
 
-        splittedText.forEach(function(elem) {
-            clutter += `<span>${elem}</span>`;
-        });
-        h1.innerHTML = clutter;
-    }
+    //     splittedText.forEach(function(elem) {
+    //         clutter += `<span>${elem}</span>`;
+    //     });
+    //     h1.innerHTML = clutter;
+    // }
 
-    breaktext();
+    // breaktext();
 
-    gsap.from("h1 span", {
-        y: 50,
-        opacity: 0,
-        duration: 0.1,
-        stagger: 0.1
-    });
-
+    // gsap.from("h1 span", {
+    //     y: 50,
+    //     opacity: 0,
+    //     duration: 1,
+    //     stagger: 0.1
+    // });
+    gsap.from(".head h1", {
+        opacity:0,
+        duration:1,
+        y:10,
+        ease: "power1.in"
+    })
     var para = document.querySelector(".head p");
     gsap.from(para, {
         y: 50,
         opacity: 0,
-        duration: 0.1
+        duration: 0.5
     });
 
     gsap.from(".nav .right a", {

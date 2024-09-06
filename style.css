@@ -133,29 +133,28 @@ html, body {
     border: 1px solid transparent;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     color: black;
-    margin-top: 100px;
     margin-bottom: 50px;
     background-size: cover;
     background-image: url("./images/varff.jpeg");
     background-repeat: no-repeat;
     background-position: center;
+    height: 100vh;
 }
 .head h1 {
-    font-size: 12vh;
-    margin-bottom: 15px;
+    margin-top: 65px;
+    font-size: 7.5vh;
     font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 900;
     font-style: normal;
     -webkit-text-stroke: 1px white;
 }
 .head p {
     font-size: 1.3em;
     margin-bottom: 30px;
-    text-shadow: 2px 2px 9px white
+    text-shadow: 2px 2px 9px white;
 }
 .headingwithicon {
     display: flex;
@@ -198,7 +197,7 @@ i {
 .about {
     width: 100%;
     display: flex;
-    min-height: 110vh;
+    min-height: 98vh;
     flex-wrap: wrap;
 }
 .leftabout, .rightabout {
@@ -268,7 +267,6 @@ i {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 10%;
 }
 
 .services .servicesBox h2 {
@@ -283,7 +281,9 @@ i {
     padding: 0 20px; /* Adjust padding to space it from the sides */
     margin: 0; /* Remove default margins */
 }
-
+.services .ac{
+    text-align: center;
+}
 .services .servicesBox .leftservicebox1 {
     width: 60%;
     padding: 10%;
