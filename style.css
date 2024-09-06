@@ -893,3 +893,9 @@ ul li a:hover{
 .swiper-slide:hover img {
     transform: scale(1.1); /* Optional: Hover effect to zoom image */
   }
+  
+@media (max-width: 768px) {
+    #brands h2{
+        font-size: 2rem;
+    }
+}
