@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,14 +8,12 @@ html, body {
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     font-style: normal;
-    color: #333;
     line-height: 1.6;
     background-color: #F1F1F1;
 }
 .main {
     width: 100%;
     background-color: #F1F1F1;
-    color: #333;
 }
 .nav .left img{
     height: 80px;
@@ -24,21 +22,21 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2px 25px; /* Increased padding for better spacing */
-    color: #333;
+    padding: 2px 25px; 
+    color: black;
     font-size: 16px;
     font-weight: bold;
     width: 100%;
+    background-color: #F1F1F1;
     position: fixed;
-    top: 0; /* Ensure the navbar is fixed to the top */
-    left: 0; /* Ensure the navbar starts from the left edge */
+    top: 0; 
+    left: 0; 
     z-index: 999;
-    opacity: 0.9; /* Slightly increased opacity for better visibility */
 }
 .nav .left {
     font-size: 1.2em;
     font-weight: bold; 
-    color: #333;
+    color: black;
 }
 .nav .right {
     display: flex;
@@ -52,8 +50,7 @@ html, body {
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 .nav .right a:hover {
-    text-decoration: underline;
-    color: black;
+    color: gray;
 }
 .nav .contButton {
     border: 1px solid #007bff;
@@ -72,8 +69,6 @@ html, body {
     color: white;
     text-decoration: none
 }
-
-/* Mobile Styles */
 @media (max-width: 768px) {
     .nav {
         display: flex;
@@ -91,7 +86,6 @@ html, body {
         text-align: left; /* Align the logo to the left */
         margin-bottom: 10px; /* Space between logo and menu */
     }
-
     .nav .hamburger {
         display: block;
         cursor: pointer;
@@ -126,16 +120,11 @@ html, body {
         padding: 0;
     }
 }
-
-/* Ensure the hamburger icon is hidden on desktop */
 @media (min-width: 769px) {
     .hamburger {
         display: none;
     }
 }
-
-
-/* Header Styles */
 .head {
     width: 100%;
     max-height: 100vh;
@@ -150,17 +139,20 @@ html, body {
     color: black;
     margin-top: 100px;
     margin-bottom: 50px;
+    background-size: cover;
+    background-image: url("https://generated-assets.prod.myninja.ai/6dac5669-1459-44fa-ac34-e73630444754/c51de638-f7c2-474a-a9ae-0eda4409f4a5_0.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
-
-
 .head h1 {
     font-size: 12vh;
     margin-bottom: 15px;
+    text-shadow: 2px 2px 9px white;
 }
-
 .head p {
     font-size: 1.3em;
     margin-bottom: 30px;
+    text-shadow: 2px 2px 9px white
 }
 .headingwithicon {
     display: flex;
@@ -170,19 +162,17 @@ html, body {
     gap: 15px;
     margin: 20px;
 }
-
 i {
-    font-size: 2em; /* Size of the icon */
-    color: black; /* Icon color */
-    margin-right: 10px; /* Space between icon and text */
-    vertical-align: middle; /* Align icon with text */
+    font-size: 2em; 
+    color: black; 
+    margin-right: 10px; 
+    vertical-align: middle; 
 }
-
 .getStartedButton {
-    border: 2px solid #007bff;
+    border: 2px solid black;
     border-radius: 25px;
-    background-color: #F1F1F1;
-    color: #007bff;
+    background-color: transparent;
+    color: black;
     padding: 12px 20px;
     font-size: 1.1em;
     font-weight: bold;
@@ -206,13 +196,13 @@ i {
     width: 100%;
     display: flex;
     min-height: 110vh;
+    flex-wrap: wrap;
 }
-
 .leftabout, .rightabout {
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     padding: 20px;
 }
 
@@ -225,7 +215,8 @@ i {
 .rightabout {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
+    padding: 20px;
 }
 /* Hero Section */
 .hero{
@@ -245,7 +236,7 @@ i {
     font-size: 1.2em;
     color: #333;
     margin-bottom: 25px;
-    text-align: center;
+    text-align: justify;
 }
 
 /* Services Section */
@@ -285,7 +276,9 @@ i {
 
 .services .servicesBox p {
     font-size: 2.1vh;
-    text-align: center;
+    text-align: justify; /* Align text from both sides */
+    padding: 0 20px; /* Adjust padding to space it from the sides */
+    margin: 0; /* Remove default margins */
 }
 
 .services .servicesBox .leftservicebox1 {
@@ -297,6 +290,7 @@ i {
 @media (max-width: 768px) {
     .head {
         padding: 30px 10px;
+        height: 70vh;
     }
 
     .head h1 {
@@ -306,6 +300,10 @@ i {
     .head p {
         font-size: 1em;
         width: 90%;
+        line-height: 1.6;
+        text-align: justify; 
+        padding: 0 20px; 
+        text-indent: 1em; 
     }
 /* 
     .services .servicesBox {
@@ -368,26 +366,24 @@ i {
 
 /* Image styles */
 .services .servicesBox img {
-    width: 80%; /* Adjust image size */
-    max-width: 200px; /* Ensure images are not too large */
-    height: auto; /* Maintain aspect ratio */
+    width: 80%; 
+    max-width: 200px; 
+    height: auto;
 }
 
-/* Styles for right service boxes */
 .services .servicesBox .rightservicebox,
 .services .servicesBox .rightservicebox1 {
-    width: 100%; /* Full width on mobile */
-    padding: 10px; /* Add padding */
-    text-align: left; /* Align text to the left */
+    width: 100%; 
+    padding: 10px;
+    text-align: left; 
 }
 
-/* Paragraph styles for right boxes */
 .services .servicesBox .rightservicebox p,
 .services .servicesBox .rightservicebox1 p {
-    text-indent: 1em; /* Indent text */
-    font-size: 1.8vh; /* Adjust font size */
-    line-height: 1.4; /* Improve readability */
-    text-align: justify; /* Justify text */
+    text-indent: 1em;
+    font-size: 1.8vh; 
+    line-height: 1.4; 
+    text-align: justify; 
 }
 
 /* Ensure the same alignment for paragraphs in 2nd and 4th boxes */
@@ -541,7 +537,9 @@ i {
     max-width: 600px; /* Limit width for larger screens */
     margin: 0 auto; /* Center align text block */
   }
-  
+  .numtext p{
+    text-align: justify;
+  }
   .cards {
     display: flex;
     flex-direction: column; /* Stack items vertically on small screens */
@@ -569,7 +567,7 @@ i {
   }
   
   .num i {
-    font-size: 3rem; /* Larger icon size */
+    font-size: 3rem;  
     color: black;
     margin-bottom: 10px;
   }
@@ -582,27 +580,27 @@ i {
   /* Responsive styles */
   @media (min-width: 768px) {
     .cards {
-      flex-direction: row; /* Align items horizontally on larger screens */
+      flex-direction: row; 
       padding: 40px 20px;
     }
   
     .num {
-      width: 30%; /* Adjust width for larger screens */
+      width: 30%; 
       margin: 20px;
     }
   }
   
   @media (max-width: 768px) {
     .number h1 {
-      font-size: 3rem; /* Adjust font size for smaller screens */
+      font-size: 3rem; 
     }
   
     .numtext {
-      padding: 0 10px; /* Adjust padding for smaller screens */
+      padding: 0 10px; 
     }
   
     .num {
-      width: 80%; /* Adjust width for smaller screens */
+      width: 80%;
     }
   }
   /* *****************************************testimonial**************************************** */
@@ -672,7 +670,7 @@ i {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* ***************************************Contact******************************************* */
+/****************************************Contact********************************************/
 
 .contact{
     padding: 40px 40px;
@@ -768,9 +766,18 @@ ul{
     justify-content: center;
 }
 .footer-col img{
-    height: 90px;
+    height: 50px;
     margin: 10px;
 } 
+.fpra{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.footer p{
+    text-align: center;
+}
 .footer-col h4{
     position: relative;
     margin-bottom: 30px;
