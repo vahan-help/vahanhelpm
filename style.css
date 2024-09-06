@@ -788,6 +788,7 @@ ul{
 }
 .footer-col p{
     color: #333;
+    text-align: justify;
 }
 .footer-col h4::before{
     content: '';
