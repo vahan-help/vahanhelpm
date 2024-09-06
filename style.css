@@ -169,10 +169,10 @@ i {
     vertical-align: middle; 
 }
 .getStartedButton {
-    border: 2px solid black;
-    border-radius: 25px;
-    background-color: transparent;
-    color: black;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
     padding: 12px 20px;
     font-size: 1.1em;
     font-weight: bold;
@@ -186,9 +186,9 @@ i {
 }
 
 .getStartedButton:hover {
-    background-color: #007bff;
     color: white;
     border-color: #0056b3;
+    scale: 1.1;
 }
 
 /* About Section */
