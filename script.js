@@ -44,54 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
         this.pause();
     });
 
-    const isMobile = window.innerWidth <= 768;
-    if (!isMobile) {
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.from(".about", {
-            scale: 0.8,
-            opacity: 0,
-            duration: 1,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: ".about",
-                start: "top 80%",
-                end: "bottom 20%",
-                scrub: true
-            }
-        });
-
-        gsap.from(".services", {
-            scale: 0.8,
-            opacity: 0,
-            duration: 1,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: ".services",
-                start: "top 80%",
-                end: "bottom 30%",
-                scrub: true
-            }
-        });
-    }
-
-    var imglft = document.querySelector(".leftabout img");
-    imglft.addEventListener("mousemove", function() {
-        gsap.to(imglft, {
-            scale: 0.8,
-            duration: 0.3,
-            ease: "power2.out"
-        });
-    });
-
-    imglft.addEventListener("mouseleave", function() {
-        gsap.to(imglft, {
-            scale: 1,
-            duration: 0.3,
-            ease: "power2.out"
-        });
-    });
-
     // Hamburger menu functionality
     document.querySelector('.hamburger').addEventListener('click', function() {
         document.querySelector('.right').classList.toggle('active');
@@ -142,5 +94,18 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error('Form not found!');
     }
-  
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        speed: 800, // Animation duration in milliseconds
+        effect: 'slide', // Default effect
+        easing: 'ease in out', // Smooth easing effect
+        freemode: true
+      });
+      
 });
