@@ -293,7 +293,7 @@ i {
 @media (max-width: 768px) {
     .head {
         padding: 10px 10px;
-        height: 70vh;
+        min-height: 70vh;
     }
 
     .head h1 {
