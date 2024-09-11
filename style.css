@@ -258,7 +258,7 @@ i {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 60vh;
+    min-height: 60vh;
 }
 
 .services .servicesBox .rightservicebox {
