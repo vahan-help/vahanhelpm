@@ -5,10 +5,13 @@
 }
 html, body {
     width: 100%;
-    font-family: "Ubuntu", sans-serif;
+    /* font-family: "Ubuntu", sans-serif; */
     font-weight: 700;
     font-style: normal;
     line-height: 1.6;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: #F1F1F1;
 }
 .main {
@@ -50,7 +53,7 @@ html, body {
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 .nav .right a:hover {
-    color: gray;
+    color: #007bff;
 }
 .nav .contButton {
     border: 1px solid #007bff;
@@ -63,11 +66,6 @@ html, body {
     margin-left: 20px;
     transition: background-color 0.3s ease;
     color: black;
-}
-.nav .contButton:hover {
-    background-color: #007bff;
-    color: white;
-    text-decoration: none
 }
 @media (max-width: 768px) {
     .nav {
@@ -127,7 +125,7 @@ html, body {
 }
 .head {
     width: 100%;
-    max-height: 100vh;
+    /* max-height: 100vh; */
     text-align: center;
     padding: 80px 20px;
     border: 1px solid transparent;
@@ -140,13 +138,14 @@ html, body {
     background-image: url("./images/varff.jpeg");
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    min-height: 80vh;
 }
 .head h1 {
     margin-top: 65px;
-    font-size: 7.5vh;
+    font-size: 6.5vh;
     font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
+    color: black;
     font-weight: 900;
     font-style: normal;
     -webkit-text-stroke: 1px white;
@@ -155,6 +154,7 @@ html, body {
     font-size: 1.3em;
     margin-bottom: 30px;
     text-shadow: 2px 2px 9px white;
+    color: black;
 }
 .headingwithicon {
     display: flex;
@@ -164,6 +164,50 @@ html, body {
     gap: 15px;
     margin: 20px;
 }
+.login-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    /* box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2); */
+  }
+
+  /* Hover Effect */
+  .login-button:hover {
+    transform: scale(1.05);
+  }
+
+  /* Icon Style */
+  .login-button .car-icon {
+    margin-right: 10px;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+  }
+  .login-button .car-icon {
+    margin-right: 8px;
+    font-size: 20px;
+    animation: drive 1.2s ease-in-out infinite;
+    font-size: 16px; /* Adjusted size for the Font Awesome icon */
+      color: #007bff; 
+  }
+
+  /* Keyframe for Car Animation */
+  @keyframes drive {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(7px); }
+  }
+  /* Icon Hover Animation */
+  .login-button:hover .car-icon {
+    transform: translateX(5px); /* Moves the car icon slightly right */
+  }
 i {
     font-size: 2em; 
     color: black; 
@@ -173,7 +217,7 @@ i {
 .getStartedButton {
     border: 1px solid transparent;
     border-radius: 5px;
-    background-color: blue;
+    background-color: #007BFF;
     color: white;
     padding: 12px 20px;
     font-size: 1.1em;
@@ -236,7 +280,7 @@ i {
 
 .hero p {
     font-size: 1.2em;
-    color: #333;
+    color: rgb(77, 75, 75);
     margin-bottom: 25px;
     text-align: justify;
 }
@@ -247,13 +291,21 @@ i {
     position: relative;
     overflow: hidden;
 }
-
+.headingwithicon{
+    display: flex;
+    flex-direction: column;
+}
 .services h1 {
     font-size: 9vh;
     text-align: center;
     color: #111;
 }
-
+.blue-line {
+    width: 160px;
+    height: 4px; /* Height of the line */
+    background-color: #007bff; /* Blue color */
+    margin: 0 auto; /* Center the line */
+  }
 .services .servicesBox {
     display: flex;
     align-items: center;
@@ -271,7 +323,7 @@ i {
 
 .services .servicesBox h2 {
     font-size: 7vh;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     margin-bottom: 10px;
 }
 
@@ -408,7 +460,6 @@ i {
     margin-bottom: 10px; /* Ensure appropriate margin */
     text-align: justify; /* Justify subheading text */
 }
-
 .services .servicesBox p {
     font-size: 1.8vh; /* Adjust paragraph text size for mobile */
     line-height: 1.4; /* Improve readability */
@@ -612,6 +663,80 @@ i {
       width: 80%;
     }
   }
+
+
+  .milestones {
+    background-color: #f0f4f8; /* Light background color */
+    padding: 60px 20px; /* Padding for spacing */
+    text-align: center; /* Center text alignment */
+}
+
+.milestones-container {
+    max-width: 1200px; /* Limit the width */
+    margin: auto; /* Center the section */
+}
+
+.milestones-container h1 {
+    font-size: 2.5rem; /* Heading size */
+    margin-bottom: 20px; /* Space below heading */
+    color: #333; /* Dark color for the heading */
+}
+
+.milestones-container p {
+    font-size: 1.5rem; /* Normal text size */
+    color: #666; /* Slightly lighter color for the paragraph */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 40px; /* Space below paragraph */
+}
+
+.milestones-cards {
+    display: flex; /* Flexbox for card layout */
+    justify-content: space-around; /* Space between cards */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.card {
+    background-color: #fff; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 30px; /* Padding inside cards */
+    width: 30%; /* Card width */
+    max-width: 300px; /* Max width for cards */
+    margin: 10px; /* Margin around cards */
+    text-align: center; /* Center text in cards */
+    transition: transform 0.3s ease; /* Animation on hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.icon img {
+    width: 60px; /* Icon size */
+    margin-bottom: 15px; /* Space below icons */
+}
+
+.card h2 {
+    font-size: 1.5rem; /* Subheading size */
+    color: #333; /* Dark color for the heading */
+}
+
+.card span {
+    color: #007BFF; /* Color for the highlighted numbers */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+@media (max-width: 768px) {
+    .milestones-cards {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center cards */
+    }
+
+    .card {
+        width: 80%; /* Full width on mobile */
+    }
+}
+
   /* *****************************************testimonial**************************************** */
   
   .reviews {
@@ -680,18 +805,51 @@ i {
 }
 
 /****************************************Contact********************************************/
-
-.contact{
-    padding: 40px 40px;
-    background-color: #01174C;
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* background-color: #01174C; */
+    padding: 40px;
 }
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
     background-color: #fff;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
     border-radius: 8px;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
+}
+
+.social-links {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px 0 0 8px;
+}
+
+.social-links h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: block;
+    margin-bottom: 15px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+}
+
+.contact-form {
+    flex: 2;
+    padding: 20px;
 }
 
 .contact-form h2 {
@@ -705,7 +863,9 @@ i {
     margin-bottom: 5px;
     color: #555;
 }
-
+i{
+    color: #007BFF;
+}
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form input[type="tel"],
@@ -717,48 +877,121 @@ i {
     border-radius: 4px;
     font-size: 16px;
 }
-.btnn{
+
+.btnn {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.contact-form button {
-    width: 40%;
-    padding: 10px;
-    background-color: #007BFF;
+
+.btnn button {
+    padding: 10px 20px;
+    background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
-    font-size: 18px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.contact-form button:hover {
+.btnn button:hover {
     background-color: #0056b3;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
-    .contact-form {
-        padding: 15px;
+    .contact {
+        flex-direction: column;
     }
-
-    .contact-form h2 {
-        font-size: 24px;
-    }
-
-    .contact-form button {
-        font-size: 16px;
+    .contact-container {
+        flex-direction: column;
     }
 }
 
+.contact {
+    padding: 60px 20px; /* Increased padding for better spacing */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center the form */
+}
+
+.contact-form {
+    max-width: 600px; /* Maximum width for the form */
+    width: 100%; /* Full width */
+    padding: 30px; /* More padding for a spacious look */
+    background-color: #fff; /* White background for the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+.contact-form:hover {
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Dark color for the heading */
+    font-family: 'Arial', sans-serif; /* Modern font */
+    font-size: 2rem; /* Larger font size */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px; /* More space below labels */
+    color: #555; /* Label color */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* More padding for comfort */
+    margin-bottom: 20px; /* Increased space below inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size for inputs */
+    transition: border 0.3s; /* Smooth border transition */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 1px solid #007BFF; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+.btnn {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center button */
+}
+
+.btnn button {
+    background-color: #007BFF; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 12px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 18px; /* Button text size */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.btnn button:hover {
+    background-color: #007BFF;
+    color: black; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
 
 footer{
     display: flex;
     flex-wrap: wrap;
     margin-top: auto;
-    background-color: #F1F1F1;
+    background-color: rgb(2, 2, 46);
     padding: 60px 10%;
+    color: white;
 }
 
 ul{
@@ -783,6 +1016,7 @@ ul{
     width: 100%;
     align-items: center;
     justify-content: center;
+    font-size: 22px;
 }
 .footer p{
     text-align: center;
@@ -791,12 +1025,12 @@ ul{
     position: relative;
     margin-bottom: 30px;
     font-weight: 400;
-    font-size: 22px;
-    color: rgb(108, 108, 108);
+    font-size: 20px;
+    color: white;
     text-transform: capitalize;
 }
 .footer-col p{
-    color: #333;
+    color: #fff;
     text-align: justify;
 }
 .footer-col h4::before{
@@ -804,7 +1038,7 @@ ul{
     position: absolute;
     left: 0;
     bottom: -6px;
-    background-color: #27c0ac;
+    background-color: #007BFF;
     height: 2px;
     width: 40px;
 }
@@ -817,7 +1051,7 @@ ul li a{
     display: block;
     font-size: 19px;
     text-transform: capitalize;
-    color: #333;
+    color: #fff;
     text-decoration: none;
     transition: 0.4s;
 }
@@ -830,6 +1064,7 @@ ul li a:hover{
     display: inline-block;
     height: 44px;
     width: 44px;
+    background-color: #fff;
     color: white;
     margin: 0 8px 8px 0;
     text-align: center;
