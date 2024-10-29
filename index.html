@@ -9,11 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script.js" defer></script> 
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="main">
@@ -26,6 +29,9 @@
                 <a href="/">Home</a>
                 <a href="#service">Services</a>
                 <a href="#about">About Us</a>
+                <a href="https://vahanapp.vahanhelp.in" class="login-button">
+                    <span class="car-icon"><i class="fa-solid fa-car-side"></i></span>Partners' Login
+                  </a>
                 <a href="#contact" class="contButton">Contact</a>
             </div>
         </div>
@@ -35,6 +41,7 @@
             <p>From buying to selling a Car, Vahan Help has you covered.</p>
             <a href="#about" class="getStartedButton">Learn More</a>
         </div>
+        <div class="rectangle"></div>
         <div id="about" class="about">
             <div class="leftabout">
                 <img src="./images/main-removebg-preview.png" alt="Home Image">
@@ -50,6 +57,7 @@
         <div id="service" class="services">
             <div class="headingwithicon">
                 <h1>Services we offer</h1>
+                <div class="blue-line"></div>
             </div>
             <div class="servicesBoxes">
                 <div class="servicesBox">
@@ -65,7 +73,7 @@
                     </div>
                 <div class="servicesBox">
                     <div class="leftservicebox1">
-                        <h2>Insurance Services</h2>
+                        <h2>Insurance</h2>
                         <p>At Vahan Help, we offer a comprehensive range of insurance services designed to protect your vehicle and provide you with peace of mind. Whether you're looking to renew your existing policy, purchase a new one, or seek expert advice on the best coverage options, our team is here to assist you. We ensure that you receive the most suitable insurance solutions tailored to your needs, with a smooth and stress-free process from start to finish. Our services include policy renewal, new policy purchases, personalized coverage advice, claims assistance, and policy management. Our dedicated professionals are committed to guiding you through every step, ensuring that your vehicle remains protected with the best coverage available. Trust us to provide reliable and efficient insurance services, helping you drive with confidence and security.</p>
                     </div>
                     <div class="rightservicebox1">
@@ -172,7 +180,8 @@
               </div>
             </div>
           </section>          
-        <div class="number">
+        <!-- <div class="number">
+
             <div class="numtext">
                 <h1>Milestones</h1>
             <p>At Vahan Help, we take pride in our journey and achievements. Over the years, we have successfully expanded our service offerings to include 15+ specialized services tailored to meet your every vehicle-related need. Our commitment to excellence has earned us the trust of 10,000+ satisfied clients, who rely on us for reliable and efficient solutions. With a dedicated team of 20+ professionals, we continuously strive to deliver exceptional service and support. These milestones reflect our dedication to providing top-notch vehicle management and care, ensuring that every client's experience with us is nothing short of outstanding.
@@ -192,49 +201,129 @@
                 <h2>serving <span>150+ </span>RTOs</h2>
             </div> 
            </div>
-        </div>
-      <div id="contact" class="contact">
-        <div class="contact-form">
-            <h2>Contact Us</h2>
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-    
-                <label for="contact">Contact Number:</label>
-                <input type="tel" id="contact" name="contact" required pattern="[0-9]{10}" title="Please enter a 10-digit contact number">
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <div class="btnn">
-                    <button type="submit">Send Message</button>
+        </div> -->
+         
+
+
+
+        <section class="milestones">
+            <div class="milestones-container">
+                <h1>Milestones</h1>
+                <p>
+                    At Vahan Help, we take pride in our journey and achievements. Over the years, we have successfully expanded our service offerings to include 15+ specialized services tailored to meet your every vehicle-related need. Our commitment to excellence has earned us the trust of 10,000+ satisfied clients. With a dedicated team of 20+ professionals, we continuously strive to deliver exceptional service and support. These milestones reflect our dedication to providing top-notch vehicle management and care.
+                </p>
+                <div class="milestones-cards">
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-taxi"></i>
+                        </div>
+                        <h2><span>15+</span> Services</h2>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-person"></i>
+                        </div>
+                        <h2><span>10,000+</span> Happy Clients</h2>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fa-solid fa-car-rear"></i>
+                        </div>
+                        <h2>Serving <span>150+</span> RTOs</h2>
+                    </div>
                 </div>
-            </form>
+            </div>
+        </section>
+        
+        <h1 style="text-align: center; font-size: 5vh;">Contact Us</h1>
+        <div id="contact" class="contact">
+            <div class="contact-container">
+                <div class="social-links">
+                    <h1>Get in touch</h1>
+                    <p style="font-size: 22px;">We'd love to hear from you! Whether you have questions about our services, need assistance, or just want to share your feedback, feel free to reach out to us through our social media channels. Our team is dedicated to providing you with prompt and helpful responses.</p>
+                    <div class="info-item">
+                        <i class="fa-solid fa-map-marker-alt"></i>
+                        <div>
+                            <p style="font-size: 18px; color: black;">Address: B-48, Basement, B Block, Sector 64, Noida, Uttar Pradesh 201301</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <p style="font-size: 18px; color: black;">Phone: <a style="color: black;" href="tel:+9181300 20341">+91 81300 20341</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <p style="font-size: 18px; color: black;">Email: <a style="color: black;" href="mailto:puneet@vahanhelp.in">info@vahanhelp.in</a></p>
+                        </div>
+                    </div>
+                    <h2>Follow Us</h2>
+                    <div class="links">
+                        <a href="https://www.linkedin.com/company/vahanhelp/posts/?feedView=all"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/918130020341"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/vahan_services/?hl=en"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h2>Send a Message</h2>
+                    <p>If you prefer to reach out via email, please fill out the form below. Our team will get back to you as soon as possible!</p>
+                    <form id="contactForm">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+            
+                        <label for="contact">Contact Number:</label>
+                        <input type="tel" id="contact" name="contact" required pattern="[0-9]{10}" title="Please enter a 10-digit contact number">
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        
+                        <div class="btnn">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
+        
       <footer>
         <div class="footer-col">
-            <h4>Address</h4>
-           <p>
-            B-48,Basement, B Block, Sector 64, Noida, Uttar Pradesh 201301
-        </p>
+            <h4>Head Office</h4>
+            <p>
+                B-48, Basement, B Block,<br>
+                Sector 64, Noida,<br>
+                Uttar Pradesh 201301
+            </p>
         </div>
+        
+        <div class="footer-col">
+            <h4>Second Office</h4>
+            <p>
+                B2 Tower 1024,<br>
+                DLF Mypad, Vibhuti Khand,<br>
+                Gomtinagar, 226010<br>
+            </p>
+        </div>
+    
         <div class="footer-col">
             <div class="items">
-                <h4>company</h4>
-            <img src="./images/2DPNG.png">
+                <h4>Company</h4>
+                <img src="./images/2DPNG.png" alt="Company Logo">
             </div>
             <ul>
-                <li><a href="#about">about</a></li>
-                <li><a href="#service">services</a></li>
-                <li><a href="#contact">contact us</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </div>
+    
         <div class="footer-col">
-            <h4>follow us</h4>
+            <h4>Follow Us</h4>
             <div class="links">
                 <a href="https://www.linkedin.com/company/vahanhelp/posts/?feedView=all"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -242,10 +331,12 @@
                 <a href="https://www.instagram.com/vahan_services/?hl=en"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
-       <div class="fpra">
-        <p>&copy; 2024 Vahan Help. All Rights Reserved.</p>
-       </div>
+    
+        <div class="fpra">
+            <p>&copy; 2024 Vahan Help. All Rights Reserved.</p>
+        </div>
     </footer>
+    
     </div> 
 </body>
 </html>
